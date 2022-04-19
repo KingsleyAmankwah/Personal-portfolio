@@ -5,6 +5,7 @@
 
 
 # Tech Stack used:
-1. HtML
+1. Html
 2. Css
 3. JavaScript
+4. Bootstrap
