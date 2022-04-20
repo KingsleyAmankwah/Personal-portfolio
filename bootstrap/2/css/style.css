@@ -1,0 +1,596 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+  color: #626262;
+}
+
+header {
+  background: url('../img/business-businessmen-classroom-communication-267507.jpg');
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 10vh;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  opacity: 0.9;
+}
+
+.quote_container {
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  z-index: 50000;
+  visibility: hidden;
+  opacity: 0.9;
+  color: #fff;
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  transition: all 650ms ease;
+}
+
+.open_quote {
+  top: 0;
+  visibility: visible;
+}
+
+.times {
+  position: absolute;
+
+  cursor: pointer;
+  right: 25px;
+  top: 25px;
+  z-index: 1000;
+}
+
+.times>div {
+  width: 2rem;
+  height: 3px;
+  background-color: #fff;
+  margin: 8px;
+}
+
+.time1 {
+  transform: rotate(-45deg) translate(-1px, 6px);
+}
+
+.time2 {
+  transform: rotate(45deg) translate(-1px, -6px);
+}
+
+.logo a {
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+span {
+  color: #0c3eb9;
+}
+
+.nav-lists {
+  display: flex;
+  justify-content: space-around;
+  width: 65%;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  color: #fff;
+  transition: all 650ms ease;
+}
+
+.nav-link:hover {
+  color: #626262;
+}
+
+.nav-item:last-child a {
+  background: #0c3eb9;
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+.nav-item:last-child a:hover {
+  color: #626262;
+}
+
+.burger {
+  cursor: pointer;
+  background-color: #fff;
+  display: none;
+}
+
+.burger>div {
+  width: 2rem;
+  height: 3px;
+  background-color: #0c3eb9;
+  margin: 8px;
+  transition: all 650ms ease;
+}
+
+.land {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 5;
+}
+
+.landing-text {
+  text-align: left;
+  color: #fff;
+}
+
+.landing-text h1 {
+  font-weight: bolder;
+  font-size: 5rem;
+}
+
+.landing-text h2 {
+  text-align: left;
+}
+
+.landing-text p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.landing-link a {
+  padding: 10px;
+  font-weight: lighter;
+  text-transform: capitalize;
+  background: #fff;
+  transition: all 650ms ease;
+  border-radius: 0.5rem;
+  color: #0c3eb9;
+}
+
+.landing-link a:hover {
+  background: #0c3eb9;
+  color: #fff;
+}
+
+.rank {
+  position: absolute;
+  top: 19%;
+  right: 1px;
+  z-index: 2;
+}
+
+.overlay1 {
+  width: 100%;
+  height: 100vh;
+  background: #0c3eb9;
+  opacity: 0.5;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-7px, -6px);
+}
+
+/* Start Research */
+.research {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin-top: -3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  z-index: 90;
+  max-width: 1440px;
+}
+
+.box {
+  width: 80%;
+  box-shadow: 1px 1px 1px 1px #626262;
+  z-index: 90;
+  background: #fff;
+  transition: all 650ms ease-in;
+}
+
+.box :hover {
+  background: #0c3eb9;
+  color: #fff;
+}
+
+.box:hover i {
+  color: #fff;
+  background: #0c3eb9;
+}
+
+.box:hover h1 {
+  color: #fff;
+}
+
+.box-content {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box-content i {
+  padding: 1rem;
+  border: 1px solid #fff;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 15px;
+  transition: all 650ms ease;
+}
+
+.readme h1 {
+  color: #000;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+/* End Research */
+
+/* Start Page */
+.main-page {
+  background: url('../img/graphs-job-laptop-papers-590016.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  max-width: 1440px;
+  margin: auto;
+  margin-bottom: 10rem;
+}
+
+.page {
+  background: #fff;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.9;
+  max-width: 1440px;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.page-headings h1,
+h2 {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.page-headings h1 {
+  text-transform: capitalize;
+  color: #000;
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.page-headings h2 {
+  font-size: 3rem;
+  color: #0c3eb9;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+.page-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.2rem;
+}
+
+.square {
+  margin: 0.5rem;
+  transition: all 650ms ease;
+}
+
+.square:hover {
+  background: #0c3eb9;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.square:hover i {
+  color: #fff;
+}
+
+.square:hover h1 {
+  color: #fff;
+}
+
+.square i {
+  color: #0c3eb9;
+  font-size: 3rem;
+  padding: 1rem;
+  transition: all 650ms ease;
+}
+
+.square h1 {
+  color: #000;
+  padding: 1rem;
+  transition: all 650ms ease;
+}
+
+.square p {
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+.square a {
+  margin: 1rem;
+  color: #0c3eb9;
+  text-transform: uppercase;
+  font-weight: bolder;
+  border-radius: 0.8rem;
+  transition: all 650ms ease;
+}
+
+.square a:hover {
+  background: #0c3eb9;
+  color: #fff;
+}
+
+/* End Page */
+
+/* Start Counter */
+
+.counters {
+  max-width: 1440px;
+  margin-top: 10rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #fff;
+  margin-bottom: 5rem;
+  padding-top: 4rem;
+  color: #000;
+  text-align: center;
+  height: 20vh;
+}
+
+.counters i {
+  display: flex;
+  color: #0c3eb9;
+  font-size: 3rem;
+  margin-left: 5rem;
+}
+
+.counters h1 {
+  padding-bottom: 5px;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.counters p {
+  font-weight: bolder;
+}
+
+/* End Counter */
+
+@media screen and (max-width: 1024px) {
+  .logo a {
+    position: absolute;
+    left: 10px;
+    top: 35%;
+  }
+
+  .nav-lists {
+    width: 70%;
+  }
+
+  .land {
+    position: absolute;
+    top: 30%;
+    left: 30;
+  }
+
+  .land h2 {
+    text-align: center;
+  }
+
+  .landing-text {
+    text-align: center;
+  }
+
+  .rank {
+    position: absolute;
+    top: 50%;
+  }
+
+  .research {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .page-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page-headings h1 {
+    font-size: 3rem;
+  }
+
+  .main-page {
+    margin-bottom: 5rem;
+  }
+
+  .counters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+    position: absolute;
+    right: 30px;
+  }
+
+  .nav-lists {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -100vh;
+    height: 50vh;
+    text-align: center;
+    width: 100%;
+    background: #fff;
+    transition: all 650ms ease-in;
+  }
+
+  .nav-active {
+    top: 10vh;
+  }
+
+  .nav-link {
+    color: #626262;
+  }
+
+  .nav-item {
+    opacity: 0;
+  }
+
+  .nav-link:hover {
+    color: #0c3eb9;
+  }
+
+  .nav-item:last-child a {
+    color: #fff;
+  }
+
+  .nav-item:last-child a:hover {
+    color: #626262;
+  }
+
+  .land {
+    position: absolute;
+    left: 10%;
+  }
+
+  .landing-text h1 {
+    font-size: 3rem;
+  }
+
+  .rank {
+    top: 70%;
+  }
+
+  .research {
+    display: block;
+    margin: 1rem;
+  }
+
+  .box {
+    width: 100%;
+    box-shadow: 2px 2px 2px 2px #000;
+    margin: 1rem 0;
+  }
+
+  .land h2 {
+    text-align: center;
+  }
+
+  .page-details {
+    display: block;
+  }
+
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .page-headings h1 {
+    font-size: 3rem;
+  }
+
+  .main-page {
+    margin-bottom: 50rem;
+  }
+
+  .counters {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page-headings h2 {
+    font-size: 1.9rem;
+  }
+
+  .page-headings h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-page {
+    margin-bottom: 50rem;
+  }
+}
