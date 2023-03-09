@@ -21,7 +21,7 @@ function linkAction() {
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 var typed = new Typed(".sub-span", {
-  strings: ["Kingsley ", " a Software Engineer"],
+  strings: ["Kingsley ", " a Software Engineer", "a Technical Writer"],
 
   typeSpeed: 40,
   backSpeed: 60,
